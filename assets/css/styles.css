@@ -164,6 +164,26 @@ body {
   color: var(--muted);
 }
 
+.footer-field {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.footer-label {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.footer-field select {
+  border-radius: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+}
+
 @media (max-width: 600px) {
   .nav {
     flex-direction: column;
