@@ -22,11 +22,69 @@
     </header>
 
     <main class="container">
-      <section class="card">
-        <h1>Crypto-to-Coffee Converter</h1>
+      <section class="card" aria-labelledby="converterTitle">
+        <h1 id="converterTitle">Crypto-to-Coffee Converter</h1>
         <p class="subtitle">
           Convert crypto value into coffee equivalents using live pricing.
         </p>
+
+        <form class="form" id="converterForm">
+          <label class="field">
+            <span>Crypto (CoinGecko ID)</span>
+            <input
+              id="cryptoIdInput"
+              name="crypto"
+              type="text"
+              placeholder="e.g., bitcoin"
+              required
+            />
+          </label>
+
+          <label class="field">
+            <span>Amount held</span>
+            <input
+              id="amountInput"
+              name="amount"
+              type="number"
+              min="0"
+              step="any"
+              value="1"
+              required
+            />
+          </label>
+
+          <label class="field">
+            <span>Coffee price (USD)</span>
+            <input
+              id="coffeePriceInput"
+              name="coffeePrice"
+              type="number"
+              min="0"
+              step="0.01"
+              value="5.00"
+              required
+            />
+          </label>
+
+          <button class="primary" type="submit" id="convertButton">
+            Convert to coffee
+          </button>
+        </form>
+
+        <section class="result" aria-live="polite">
+          <p class="status" id="statusText">Ready to convert.</p>
+          <div class="metrics">
+            <div class="metric">
+              <span class="metric-label">Crypto value</span>
+              <span class="metric-value" id="cryptoValue">$0.00</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Coffees you can buy</span>
+              <span class="metric-value" id="coffeeCount">0</span>
+            </div>
+          </div>
+          <p class="note" id="noteText"></p>
+        </section>
       </section>
     </main>
 
