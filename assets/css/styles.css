@@ -1,3 +1,23 @@
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --accent: #4f46e5;
+}
+
+.theme-dark {
+  color-scheme: dark;
+  --bg: #0f172a;
+  --surface: #111827;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --border: #1f2937;
+  --accent: #818cf8;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,8 +26,8 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #f5f7fb;
-  color: #0f172a;
+  background: var(--bg);
+  color: var(--text);
   min-height: 100vh;
 }
 
@@ -19,16 +39,32 @@ body {
 
 .hero {
   padding: 16px 24px;
-  background: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
 }
 
 .brand {
   font-weight: 700;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.theme-toggle {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 .card {
-  background: #ffffff;
+  background: var(--surface);
   padding: 32px;
   border-radius: 16px;
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
@@ -36,11 +72,11 @@ body {
 
 .subtitle {
   margin-top: 8px;
-  color: #64748b;
+  color: var(--muted);
 }
 
 .footer {
   text-align: center;
   padding: 24px;
-  color: #64748b;
+  color: var(--muted);
 }
