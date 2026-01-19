@@ -8,7 +8,6 @@ const cryptoValueEl = document.getElementById("cryptoValue");
 const coffeeCountEl = document.getElementById("coffeeCount");
 const noteText = document.getElementById("noteText");
 const convertButton = document.getElementById("convertButton");
-const topCryptoSelect = document.getElementById("topCryptoSelect");
 
 // This function applies the selected theme by toggling a class on the body.
 function applyTheme(theme) {
@@ -46,10 +45,6 @@ themeToggleButton.addEventListener("click", () => {
 	applyTheme(nextTheme);
 });
 
-// This listener helps beginners by copying the dropdown value into the input.
-topCryptoSelect.addEventListener("change", (event) => {
-	cryptoIdInput.value = event.target.value;
-});
 
 // This helper formats numbers into USD currency for display.
 function formatCurrency(value) {

@@ -30,14 +30,19 @@
 
         <form class="form" id="converterForm">
           <label class="field">
-            <span>Crypto (CoinGecko ID)</span>
-            <input
-              id="cryptoIdInput"
-              name="crypto"
-              type="text"
-              placeholder="e.g., bitcoin"
-              required
-            />
+            <span>Crypto (Top 10)</span>
+            <select id="cryptoIdInput" name="crypto" required>
+              <option value="bitcoin">Bitcoin (BTC)</option>
+              <option value="ethereum">Ethereum (ETH)</option>
+              <option value="tether">Tether (USDT)</option>
+              <option value="binancecoin">BNB (BNB)</option>
+              <option value="solana">Solana (SOL)</option>
+              <option value="ripple">XRP (XRP)</option>
+              <option value="usd-coin">USDC (USDC)</option>
+              <option value="cardano">Cardano (ADA)</option>
+              <option value="dogecoin">Dogecoin (DOGE)</option>
+              <option value="tron">TRON (TRX)</option>
+            </select>
           </label>
 
           <label class="field">
@@ -87,24 +92,6 @@
         </section>
       </section>
     </main>
-
-    <footer class="footer">
-      <label class="footer-field">
-        <span class="footer-label">Top 10 crypto list</span>
-        <select id="topCryptoSelect">
-          <option value="bitcoin">Bitcoin (BTC)</option>
-          <option value="ethereum">Ethereum (ETH)</option>
-          <option value="tether">Tether (USDT)</option>
-          <option value="binancecoin">BNB (BNB)</option>
-          <option value="solana">Solana (SOL)</option>
-          <option value="ripple">XRP (XRP)</option>
-          <option value="usd-coin">USDC (USDC)</option>
-          <option value="cardano">Cardano (ADA)</option>
-          <option value="dogecoin">Dogecoin (DOGE)</option>
-          <option value="tron">TRON (TRX)</option>
-        </select>
-      </label>
-    </footer>
 
     <script src="assets/js/script.js"></script>
   </body>
